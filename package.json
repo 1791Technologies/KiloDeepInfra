@@ -1,0 +1,62 @@
+{
+  "name": "kilocode-deepinfra",
+  "displayName": "Kilo Code – DeepInfra Helper",
+  "description": "Adds DeepInfra as an OpenAI-compatible provider for the Kilo Code extension. Get access to powerful AI coding models like DeepSeek-R1, Qwen-Coder, and more through DeepInfra's API.",
+  "version": "1.0.3",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1791Technologies/kilocode-deepinfra-helper.git"
+  },
+  "publisher": "1791Technologies",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "kilocode",
+    "deepinfra",
+    "ai",
+    "coding",
+    "openai",
+    "deepseek",
+    "qwen",
+    "llama",
+    "code-assistant",
+    "api",
+    "provider"
+  ],
+  "extensionDependencies": [
+    "kilocode.Kilo-Code@>=3.0.0"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "deepinfra.configure",
+        "title": "Kilo Code: Switch to DeepInfra"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "esbuild src/extension.ts --bundle --platform=node --target=node22 --external:vscode --outfile=dist/extension.js",
+    "watch": "esbuild src/extension.ts --bundle --platform=node --target=node22 --external:vscode --watch --outfile=dist/extension.js",
+    "lint": "tsc --noEmit",
+    "package": "npm run build && vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^3.6.0",
+    "esbuild": "^0.25.8",
+    "typescript": "^5.7.0"
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  }
+}

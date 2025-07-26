@@ -1,0 +1,17 @@
+
+// ────────────────────────────
+// 🏗 tsconfig.json
+// ────────────────────────────
+// Save as: tsconfig.json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2020",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"]
+}
